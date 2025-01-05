@@ -12,6 +12,8 @@
             [selmer.parser :refer [render-file]]
             [environ.core :refer [env]]))
 
+(def port (Integer. (or (System/getenv "PORT") "3000")))
+
 ;; Constants
 (def date-formatter (f/formatter "yyyy-MM-dd"))
 
@@ -240,4 +242,4 @@
 
 ;; Start the server
 (defn -main []
-  (jetty/run-jetty app-routes {:port 3000 :join? false}))
+  (jetty/run-jetty app-routes {:port port :join? false}))
