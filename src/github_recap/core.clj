@@ -1,4 +1,5 @@
 (ns github-recap.core
+  (:gen-class)
   (:import [java.time LocalDate])
   (:require [compojure.core :refer :all]
             [compojure.route :as route]

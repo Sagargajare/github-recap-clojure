@@ -15,7 +15,8 @@
                  [selmer "1.12.44"]]
   :plugins [[environ/environ.lein "0.3.1"] [dev.weavejester/lein-cljfmt "0.13.0"]]
   :hooks [environ.leiningen.hooks]
-  :main ^:skip-aot github-recap.core 
+  :main github-recap.core 
+  :aot [github-recap.core]
   :uberjar-name "github-recap.jar"
   :target-path "target/%s"
   :repositories [["central" {:url "https://repo1.maven.org/maven2/" :snapshots false}]
