@@ -1,4 +1,5 @@
-(defproject github-recap "0.1.0-SNAPSHOT"
+(defproject github-recap "0.1.0-SNAPSHOT" 
+  :min-lein-version "2.0.0"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
@@ -16,5 +17,7 @@
   :hooks [environ.leiningen.hooks]
   :main ^:skip-aot github-recap.core
   :target-path "target/%s"
+  :repositories [["central" {:url "https://repo1.maven.org/maven2/" :snapshots false}]
+                 ["clojars" {:url "https://clojars.org/repo"}]]
   :profiles {:uberjar {:aot :all
                        :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}})
